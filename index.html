@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container py-5">
+
+                <h1 class="text-center text-dark fw-bolder">CRUD System</h1>
+                <h2 class="text-center text-secondary fw-bolder mb-3">Products Storage</h2>
+                <label for="pName" class="form-label">Product Name</label>
+                <input type="text" id="pName" class="form-control mb-3" >
+                <p class=" d-none" id="errorName">Please This Input Is requiered</p>
+                
+                <label for="pPrice" class="form-label">Product Price</label>
+                <input type="text" id="pPrice" class="form-control mb-3" >
+                <p class="d-none" id="errorPrice">Please This Input Is requiered<br> Please Enter Number Only</p>
+
+                <label for="pCat" class="form-label">Product Catagory</label>
+                <input type="text" id="pCat" class="form-control mb-3">
+                <p class="d-none" id="errorCat">Please This Input Is requiered</p>
+                <label for="pDesc" class="form-label">Product Description</label>
+                <textarea type="text" id="pDesc" class="form-control"></textarea>
+                <p class="d-none" id="errorDesc">Please This Input Is requiered</p>
+
+                <button class="btn btn-primary mt-3 mb-5 " id="addBtn" onclick="addProduct();">Add Product</button>  
+                <button class="btn btn-secondary mt-3 mb-5" onclick="clearValue(); normalInput();">reset</button>  
+
+            <input type="text" class="form-control m-auto w-50" onkeyup="searchProduct(this.value)" placeholder="Search Products">
+
+            <table class="table mt-5 text-primary text-center">
+                <thead>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Catagory</th>
+                    <th>Description</th>
+                    <th class=" text-warning">Product Update</th>
+                    <th class=" text-danger">Product Delete</th>
+                    
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/mine.js"></script>
+    </body>
+</html>
